@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background: linear-gradient(to right, rgb(19, 85, 126), rgb(120, 130, 220)),url(https://cdn.pixabay.com/photo/2018/06/21/13/57/clouds-3488632_1280.jpg) */
+ background: #fff;
+}
+
+
+.container h1{
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 10px 10px 10px rgba(0,0,0,0.5),0px rgb(0, 0, 0 0.5);
+}
+
+
+.container{
+    width: 900px;
+    height: 800px;
+   background: skyblue;
+    padding: 50px 20px;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 30px 30px 40px rgba(245, 0, 0, 0.5),0px rgb(0, 0, 0 0.5);
+
+    
+}
+
+
+.search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    border: none;
+    
+    
+}
+
+.search input{
+    width: 90%;
+    height: 40px;
+    font-size: 23px;
+    border: 2px solid rgb(0, 0, 0);  
+    padding: 20px 10px;  
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#cityName{
+    font-weight: bold;
+    margin-top: -4rem;
+}
+
+
+.search span{
+    position: relative;
+    color: rgb(0, 0, 0);    
+ 
+    font-size: 24px;
+    right: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
+.casumadaha{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-top: 12px;
+    color: #000 ;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+
+   
+}
+
+
+
+
+
+
