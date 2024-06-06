@@ -6,7 +6,9 @@
     <title>weather app</title>
     <link rel="stylesheet" href="index.css">
     <!-- googel fonts  -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />     
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />    
+      <!--fonts awresome icns  -->
+    <script src="https://kit.fontawesome.com/59e02c8d2b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -19,96 +21,153 @@
               <h4>carmo</h4>
            </div>
         <div class="search">
-        <span class="material-symbols-outlined" style="color: #fff;" >location_on </span>
+        <!-- <span class="material-symbols-outlined" style="color: #fff;" >location_on </span> -->
         <input type="text" placeholder="enter city name" id="city" > 
        <span class="material-symbols-outlined" id="search">search</span>
         </div>
-          <div class="weather">
-              <div class="city" style="display: flex;">
-                  <img src="https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather02-512.png" width="100px" height="126px" alt="">
-                     <div class="text" id="weathr"  style="margin-top: 45px; font-weight: bold; color: #fff; " >
-                       
 
+           <div class="weather" style="display: flex; justify-content: center; margin-top: 40px; gap: 40px;" >
+               <div class="next" style="display: flex;" >
+                  <img src=""  id="image" width="140px" height="140px" style="margin-top: -40px;margin-right: 50px; "  alt="" >
+                  <div class="tex">
+                     <h2 id="city1" style="color: #fff;" ></h2>
+                     <h2 id="temp" style="color: #fff;" ></h2>
+                  </div>                 
+               </div>
+               <div class="two">
+                  <h3 style="color: #fff;" id="title"></h3>
+                  <p style="color: #fff;font-size: 20px; margin-left: 30px; " id="desc"></p>
+               </div>
+               <div class="time">
+                  <h3 style="color: #fff;" id="day" ></h3>
+                  <h3 id="time" style="color: #fff;" >
+                      <span id="day"></span>
+                      00</h3>
+                  
+               </div>
+               
+           </div>
+          
+        
+           
+           
+          
+         
+   
 
-                        
-                     </div>
-                    
-                   
-            </div>   
-            <div class="time" style="float: right; margin-top: -62px; padding: 0px 30px; font-weight: bold; " >
-                <h3 style="color: #fff;">weather</h3>
-                <h3 id="time" style="color: #fff;" >
-                    <span id="day"></span>
-                    00</h3>
-                
+             
+        
+             
+          
+<!-- 
+           <div class="weather" style=" display: flex; gap: 80px; justify-content: center;">
+             <div class="one" >
+
+                <img src=""  id="image" width="140px" height="140px"  alt="">\
+                <h2 id="city1"></h2>
+                <h2 id="temp"></h2>      
+               </div>
+            
+            <div class="q" style="text-align: center; margin-top: 30px;" >
+            <h2 style="color: #fff; font-size: 30px;  " id="title"> <strong>Sunny</strong></h2>
+            <p style="margin-left: 30px;  color: #fff;" id="desc" ></p>
              </div>
+                      
+                                       
+          </div>  -->
+          <!-- start here top -->
+
+          <div class="hu" style="display: flex;gap: 50px; justify-content: center;margin-top: 50px;margin-bottom: 40px; ">
+            <div class="tem" id="fels" >
+              <h3 style="margin-left: 30px; color: #fff; " >feel like</h3>
+              <i class="fa-solid fa-temperature-three-quarters  " style="float: left; right: 13px;  margin-top: -12px; font-size: 23px; "></i>
+                <div class="th">
+                 <h3 id="feel" style="color: #fff;"> </h3>
+                </div>       
+            </div>
+
+            <div class="tem" id="fels" >
+              <h3 style="margin-left: 30px; color: #fff; " >Speed weather</h3>
+              <i  class="fa-sharp fa-solid fa-wind  " style="float: left; right: 13px;  margin-top: -12px; font-size: 20px; "></i>
+                <div class="th">
+                 <h3 id="wind"  style="color: #fff;">30°C|F</h3>
+                </div>       
+            </div>
+
+            <div class="tem" id="fels" >
+              <h3 style="margin-left: 30px; color: #fff; " >pressure</h3>
+              <i  class="fa-sharp fa-solid fa-gem" style="float: left; right: 13px;  margin-top: -12px; font-size: 20px; " ></i>
+                <div class="th">
+                 <h3 id="pressure" style="color: #fff;">30°C|F</h3>
+                </div>       
+            </div>
+            <div class="tem" id="fels" >
+              <h3 style="margin-left: 30px; color: #fff; " >humidity</h3>
+              <i class="fa-regular fa-droplet-degree" style="float: left; right: 13px;  margin-top: -12px; font-size: 20px; "></i>
+                <div class="th">
+                 <h3 id="humidity" style="color: #fff;">30°C|F</h3>
+                </div>       
+            </div>
+
+
           </div>
-             <div class="winds" id="winds" style="display: flex; margin-top:80px; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; "  >
-               
-               
-                
-<!--           
-             <div class="wind">
+
+
+          <!-- here winds -->
+
+
+       <div class="winds" id="winds" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px;">    
+             <div class="wind" style="color: #fff;" >
+                <h5 style="color: #fff;" >Sun</h5>
                 <p>6pm</p>
-                <h5>Sun</h5>
-                <img src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" width="100px" height="126px" alt="">
+                 <img src="./weather1.png"  width="100px" height="126px" alt=""> 
                 <p>
                     68°C
                     <span>40°C</span>
                 </p>
              </div>
-             <div class="wind">
-                <p>6pm</p>
-                <h5>Mon</h5>
-                <img src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" width="100px" height="126px" alt="">
+             
+
+               <div class="wind" style="color: #fff;" >
+                 <h5>Mon</h5>
+                 <p>6pm</p>
+                <img src="./weather1.png" id="image" width="100px" height="126px" alt="">
                 <p>34°C
                     <span>40°C</span>
                 </p>
-             </div>
-             
-             <div class="wind">
+             </div>  
+              <div class="wind" style="color: #fff;" >
                 <div class="date" >
-                    <p>6pm</p>
-                    <h5>Tue</h5>
-                    <img src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" width="100px" height="126px" alt="">
+                   <h5>Tue</h5>
+                   <p>6pm</p>
+                    <img src="./weather1.png" id="image" width="100px" height="126px" alt="">
                      <p>68°C 
                      <span>40°C</span>
                     </p>
                 </div>
              </div>
-             <div class="wind">
+             <div class="wind" style="color: #fff;" >
                 <div class="date" >
-                    <p>6pm</p>
-                    <h5>Wends</h5>
-                    <img src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" width="100px" height="126px" alt="">
+                   <h5>Wends</h5>
+                   <p>6pm</p>
+                    <img src="./weather1.png" width="100px" height="126px" alt="">
                      <p>68°C 
                      <span>40°C</span>
                     </p>
                 </div>
              </div>
-             <div class="wind">
+             <div class="wind" style="color: #fff;" >
                 <div class="date" >
-                    <p>6pm</p>
-                    <h5>Thurs</h5>
-                    <img src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" width="100px" height="126px" alt="">
+                   <h5>Thurs</h5>
+                   <p>6pm</p>
+                    <img src="./weather1.png" id="image"  width="100px" height="126px" alt="">
                      <p>68°C 
                      <span>40°C</span>
                     </p>
                 </div>
              </div>
-             <div class="wind">
-                <div class="date" >
-                    <p>6pm</p>
-                    <h5>Fri</h5>
-                    <img src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" width="100px" height="126px" alt="">
-                     <p>68°C 
-                     <span>40°C</span>
-                    </p>
-                </div>
-             </div> -->
-             
-             </div>
-    </div>
+             </div>  
+    </div> 
 
     <script src="weather.js"></script>
 </body>

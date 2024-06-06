@@ -1,23 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Display Date and Time</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ali.css">
 </head>
 <body>
-    <h1 id="datetime"></h1>
+    <div class="weather" style="display: flex;" >
+        <div class="one">
+        <img src="weather1.png" id="image" width="140px" height="140px" alt="">
+           <h2 id="city1">www</h2>
+           <h2 id="temp">www</h2>
+        </div>
+        <div class="q" style="text-align: center; margin-top: 30px;" >
+         <h2 style="color: #fff; font-size: 30px;" id="title"> <strong>Sunny</strong></h2>
+         <p style="margin-left: 30px;  color: #fff;" id="desc" ></p>
+        </div>
+        <div class="time">
+           <h3 style="color: #fff;">weather</h3>
+           <h3 id="time" style="color: #fff;" >
+               <span id="day"></span>
+               00</h3>
+        </div>
+          
+      </div>
 
-    <script>
-        function displayDateTime() {
-            var now = new Date();
-            var dateTimeString = now.toLocaleString();
-            document.getElementById("datetime").innerHTML = dateTimeString;
-        }
-
-            displayDateTime();
-            setInterval(displayDateTime, 1000); // Update the time every second
-
-            
-            
-    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="ali.js"></script>
 </body>
 </html>

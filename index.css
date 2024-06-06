@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,12 +7,25 @@
 }
 
 body{
-    /* background: linear-gradient(to right, rgb(19, 85, 126), rgb(120, 130, 220)),url(https://cdn.pixabay.com/photo/2018/06/21/13/57/clouds-3488632_1280.jpg) */
- background: #fff;
+
+    
+   
+    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%),url(https://www.weather-forecast.com/system/images/1850/thumb_gallery_rtn/Ogunquit.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+   font-family: "Andika", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+;
 }
 
 
 .container h1{
+    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
     color: #fff;
     font-size: 50px;
     text-shadow: 10px 10px 10px rgba(0,0,0,0.5),0px rgb(0, 0, 0 0.5);
@@ -18,14 +33,20 @@ body{
 
 
 .container{
-    width: 900px;
+    width: 700px;
     height: 800px;
-   background: skyblue;
+    border: 2px solid rgb(0, 0, 0);
+    background-image: url("./weather1.png");
+    background-size: cover;
+    background-position: center;
+    
+
     padding: 50px 20px;
+    background: skyblue;
     text-align: center;
     margin: 20px auto;
     border-radius: 10px;
-    box-shadow: 30px 30px 40px rgba(245, 0, 0, 0.5),0px rgb(0, 0, 0 0.5);
+    box-shadow: 10px 30px 40px rgba(0, 0, 0, 0, 0.5),40px, 40px rgb(0, 0, 0 0.5);
 
     
 }
@@ -83,7 +104,103 @@ body{
    
 }
 
+@media (max-width: 768px) {
+    .container {
+      width: 90%;
+      height: 800px;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 30px 30px 40px rgba(245, 0, 0, 0.5),0px rgb(0, 0, 0 0.5);
+      background: skyblue
+    }
+  }
 
+  /* @media  (min-width: 275px) {
+    .casumadaha {
+        display: flex;
+        width: 100%;
+        gap: 5px;
+        justify-content: center;
+        margin-top: 20px;
+        margin-top: 12px;
+        color: #000 ;
+        font-size: 20px;
+        font-weight: bold;
+        color: #ff0000;
+
+       
+    }
+        
+        
+  } */
+
+  @media screen and (max-width: 768px) and (min-width: 275px) {
+    .casumadaha {
+        display: flex;
+        width: 100%;
+        gap: 5px;
+        justify-content: center;
+        margin-top: 20px;
+        margin-top: 12px;
+        color: #000 ;
+        font-size: 20px;
+        font-weight: bold;
+        color: #ff0000;
+
+       
+    }
+  }
+
+
+@media screen and (max-width: 768px) and (min-width: 275px) {
+    .search {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        border: none;
+    }
+
+
+    .search input {
+        width: 100%;
+        height: 40px;
+        font-size: 23px;
+        border: 2px solid rgb(0, 0, 0);
+        padding: 20px 10px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+}
+
+.weather  {
+   
+
+   
+}
+@media(max-width: 768px) {
+    .weather{
+        
+    }
+
+      
+      
+     
+       
+
+    }
+    
+
+
+@media screen and (max-width: 768px) and (min-width: 275px) {
+    .hu, .tem {
+       
+       
+   
+    }
+}
 
 
 
