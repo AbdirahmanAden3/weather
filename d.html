@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somalia Cities Temperature</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+ <style>
+   body  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.chart-container {
+    width: 40%;
+    max-width: 800px;
+}
+
+canvas {
+    /* background-color: #e40000; */
+}
+ </style>
+<body>
+    <div class="chart-container">
+        <canvas id="tempChart"></canvas>
+    </div>
+    <script>
+        const ctx = document.getElementById('tempChart').getContext('2d');
+
+// Sample data for highest temperatures in different cities
+const cities = ["Mogadishu", "Galkacyo", "Bosaso", "Qardho"];
+const highestTemps = [35, 3, 3, 36, 39, 34, 36];  // Replace with actual data
+
+const tempChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: cities,
+        datasets: [{
+            label: 'Highest Temperature',
+            data: highestTemps,
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            fill: true,
+            tension: 0.1
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: true,
+                position: 'top'
+            }
+        },
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    
+                }
+            },
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Temperature (°C)'
+                }
+            }
+        }
+    }
+});
+
+       
+
+
+
+    </script>
+</body>
+</html>
