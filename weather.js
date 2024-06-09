@@ -91,9 +91,12 @@ search.addEventListener('click', () => {
         displayWeather(data);
 
 
+
     }).catch(err => console.log(err));
 
 } 
+
+
 
 function displayWeather(data) {
     // Display the fetched weather data
@@ -102,7 +105,7 @@ function displayWeather(data) {
     temp.innerHTML = `${data.main.temp} °/C`;
     // weatherDescription.innerHTML = data.weather[0].description;
     weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
-    images.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+
   
     // console.log(weatherIcon)
  
@@ -112,6 +115,12 @@ function displayWeather(data) {
     // });
 
 }
+console.log("hello");
+// console.log(displayWeather("garowe"));
+// displayWeather("garowe");
+
+
+
 
 
 //   get("garowe")
