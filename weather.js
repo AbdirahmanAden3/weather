@@ -58,6 +58,49 @@ search.addEventListener('click', () => {
 
 });
 
+let winds = document.getElementById('winds');
+
+// Define the array of weather data objects
+const weatherData = [
+    { day: "Monday", time: "12:00 PM", icon: "01d", temp: 25, feels_like: 28 },
+    { day: "Tuesday", time: "3:00 PM", icon: "02d", temp: 22, feels_like: 24 },
+    { day: "Wednesday", time: "6:00 PM", icon: "03d", temp: 20, feels_like: 22 },
+    { day: "Thursday", time: "9:00 PM", icon: "04d", temp: 18, feels_like: 20 },
+    { day: "Friday", time: "12:00 AM", icon: "01d", temp: 25, feels_like: 28 },
+    { day: "Saturday", time: "3:00 AM", icon: "02d", temp: 22, feels_like: 24 },
+    // Add more weather data objects as needed
+];
+
+// Function to update the weather display
+function updateWeather() {
+    let htm = "";
+    // Loop through each weather data object
+    weatherData.forEach(data => {
+        // Append HTML for each data object
+        htm += ` <div class="wind" id="winds" style="color: #fff;">
+                    <h5>${data.day}</h5>
+                    <p>${data.time}</p>
+                    <img src="https://openweathermap.org/img/wn/${data.icon}@2x.png" width="100px" height="126px" alt="">
+                    <p> 
+                        ${data.temp}°/C
+                        <span>${data.feels_like}°C</span>
+                    </p>
+                </div>`;
+    });
+    // Update the winds element with the HTML
+    winds.innerHTML = htm;
+}
+
+// Call updateWeather initially to display the initial weather data
+updateWeather();
+
+// Set interval to update the weather display every few seconds
+setInterval(updateWeather, 5000); // Adjust the interval as needed
+
+
+
+
+
     // return
 
     // getLocation_address(city.value)
@@ -79,9 +122,11 @@ search.addEventListener('click', () => {
         desc.innerHTML =  data.weather[0].description
         title.innerHTML =  data.weather[0].main
         images.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+
         
-        console.log(data);
         
+        
+       
         
     
         
@@ -96,10 +141,13 @@ search.addEventListener('click', () => {
 
 } 
 
+get("garowe")
 
 
 function displayWeather(data) {
     // Display the fetched weather data
+
+  
 
       
     temp.innerHTML = `${data.main.temp} °/C`;
@@ -123,7 +171,6 @@ console.log("hello");
 
 
 
-//   get("garowe")
     
   
     // let Apike  =    `2185595cc307fea49894a72dd004af2b`;

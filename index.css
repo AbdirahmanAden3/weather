@@ -2,7 +2,6 @@
 
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -21,7 +20,7 @@ body {
 .container h1 {
     background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
     color: #fff;
-    border-radius: 30px;
+    border-radius: 1 solid #fff;
     font-size: 50px;
     text-shadow: 10px 10px 10px rgba(0,0,0,0.5),0px rgb(0, 0, 0 0.5);
 }
@@ -29,14 +28,13 @@ body {
 .container {
     width: auto;
     height: auto;
-    border: 2px solid skyblue;
+    border: 10px solid skyblue;
     background-size: cover;
     background-position: center;
-   
     text-align: center;
-    margin: 20px auto;
+   
     border-radius: 10px;
-    box-shadow: 10px 30px 40px rgba(0, 0, 0, 0.5), 40px, 40px rgb(0, 0, 0 0.5);
+  
 }
 
 .search {
@@ -49,12 +47,16 @@ body {
 
 .search input {
     width: 90%;
-    height: 40px;
-    font-size: 23px;
-    border: 5px solid rgb(0, 0, 0);
-    padding: 20px 10px;
+    padding: 12px 20px;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     border-radius: 20px;
+    font-weight: bold;
     cursor: pointer;
+    font-family:  Arial,  sans-serif;
     border: none;
 }
 
@@ -82,14 +84,14 @@ body {
     font-weight: bold;
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     .container {
         max-width: 100%;
         border-radius:20px;
         font-size: 10px
     }
-}
-
+} */
+/* 
 @media screen and (max-width: 768px) and (min-width: 275px) {
     .casumadaha {
         display: flex;
@@ -100,7 +102,7 @@ body {
         color: #ff0000;
         font-size: 20px;
         font-weight: bold;
-    }
+    } */
 
     .search input {
         width: 100%;
@@ -111,7 +113,7 @@ body {
         border-radius: 20px;
         cursor: pointer;
     }
-}
+
 
 .weather {
     display: flex;
@@ -120,7 +122,7 @@ body {
     flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .weather {
         flex-basis: 20%;
     }
@@ -130,9 +132,9 @@ body {
         flex-basis: 50%;
         height: 40px;
     }
-}
+} */
 
-@media screen and (max-width: 768px) and (min-width: 275px) {
+/* @media screen and (max-width: 768px) and (min-width: 275px) {
     .hu, .tem {
         width: 100%;
         display: flex;
@@ -143,13 +145,13 @@ body {
         gap: 20px;
         margin-top: 30px;
         border: none;
-    }
+    } */
 
     h1 {
         width: 100%;
         font-size: 50px;
     }
-}
+
 
 #myChart {
     color: #fff;
@@ -164,7 +166,7 @@ body {
     justify-content: center;
 }
 
-@media screen and (max-width: 768px) and (min-width: 275px) {
+/* @media screen and (max-width: 768px) and (min-width: 275px) {
     .c #myChart {
         margin: auto;
         margin-top: 40px;
@@ -174,26 +176,71 @@ body {
         align-items: center;
         justify-content: center;
     }
-}
+} */
 
 #tempChart {
     background: #fff;
-    margin-top: 40px;
     color: black;
+    margin-top: 40px;
     font-weight: bold;
+    height: 100vh;
     width: 100%;
     flex-direction: column;
     align-items: center;
     display: block;
     height: 333px;
     width: 666px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
 }
 
-.chart-container {
-    width: 100%;
-    justify-content: center;
-    height: auto;
-    align-items: center;
-    margin: auto;
-    display: flex;
+
+@media (max-width: 768px) {
+    .container  {
+      width: 100%;
+        border-radius:20px;
+        font-size: 10px;
+        padding : 20px;
+    }
+    
+    .container h1{
+        font-size: 35px;
+        width: 100%;
+    }
+
+    .search input {
+        width:983px;
+        height: 60px;
+        font-size: 23px;
+        border: 2px solid rgb(0, 0, 0);
+        padding: 20px 10px;
+        border-radius: 20px;
+        cursor: pointer;
+    
+        flex-basis: 50%;
+        height: 40px;
+    }
+
+  
+    .weather{
+        display: flex;
+        font-size: 40px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 30px;
+        width: 100%
+        
+     
+       
+     
+    }
+
 }
+
+
+
+
